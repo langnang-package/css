@@ -2,7 +2,7 @@
  * @name Grid
  * @desc 栅格布局
  */
-.#{$g-pre}grid-container {
+.#{$g-pre}grid {
   @media (min-width: 768px) {
     width: 750px;
   }
@@ -16,8 +16,8 @@
   }
 }
 
-.#{$g-pre}grid-container,
-.#{$g-pre}grid-container-fluid {
+.#{$g-pre}grid,
+.#{$g-pre}grid-fluid {
   padding-left: 15px;
   /* 设置padding是为了后面Column直接嵌套Row预留 */
   padding-right: 15px;
@@ -28,7 +28,7 @@
     box-sizing: border-box;
   }
 
-  .#{$g-pre}row {
+  .row {
     margin-left: -15px;
     margin-right: -15px;
 
@@ -40,12 +40,12 @@
       clear: both;
     }
 
-    &+.#{$g-pre}row {
+    &+.row {
       margin-top: 10px;
     }
   }
 
-  [class*="#{$g-pre}col-"] {
+  [class*="col-"] {
     float: left;
     min-height: 1px;
     padding: 4px;
@@ -53,11 +53,11 @@
   }
 
   @for $i from 1 through 12 {
-    .#{$g-pre}col-#{$i} {
+    .col-#{$i} {
       width: calc($i / 12) * 100%;
     }
 
-    .#{$g-pre}col-offset-#{$i} {
+    .col-offset-#{$i} {
       margin-left: calc($i / 12) * 100%;
     }
   }
@@ -65,11 +65,11 @@
   /* 小屏幕 平板等 屏幕宽度大于等于768px */
   @media (min-width: 768px) {
     @for $i from 1 through 12 {
-      .#{$g-pre}col-sm-#{$i} {
+      .col-sm-#{$i} {
         width: calc($i / 12) * 100%;
       }
 
-      .#{$g-pre}col-offset-sm-#{$i} {
+      .col-offset-sm-#{$i} {
         margin-left: calc($i / 12) * 100%;
       }
     }
@@ -78,11 +78,11 @@
   /* 中等屏幕 桌面显示器等 屏幕宽度大于等于992px */
   @media (min-width: 992px) {
     @for $i from 1 through 12 {
-      .#{$g-pre}col-md-#{$i} {
+      .col-md-#{$i} {
         width: calc($i / 12) * 100%;
       }
 
-      .#{$g-pre}col-offset-md-#{$i} {
+      .col-offset-md-#{$i} {
         margin-left: calc($i / 12) * 100%;
       }
     }
@@ -91,11 +91,11 @@
   /* 大屏幕 大桌面显示器等 屏幕宽度大于等于1200px */
   @media (min-width: 1200px) {
     @for $i from 1 through 12 {
-      .#{$g-pre}col-lg-#{$i} {
+      .col-lg-#{$i} {
         width: calc($i / 12) * 100%;
       }
 
-      .#{$g-pre}col-offset-lg-#{$i} {
+      .col-offset-lg-#{$i} {
         margin-left: calc($i / 12) * 100%;
       }
     }

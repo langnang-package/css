@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "build": "",
+    "start": "sass --watch packages/index.scss dist/ln.css",
+    "build": "sass packages/index.scss dist/ln.css",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.52.3"
   },
   "repository": {
     "type": "git",
