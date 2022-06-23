@@ -1,0 +1,12 @@
+// 页头
+@import "./../constants/prefix.scss";
+@import "./../constants/color.scss";
+@import "./../constants/size.scss";
+@import "./../mixin/color.scss";
+@import "./../mixin/size.scss";
+
+.#{$g-pre}page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}

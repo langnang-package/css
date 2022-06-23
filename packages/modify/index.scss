@@ -1,0 +1,32 @@
+// 修饰类
+// 色彩类
+@import "./../constants/prefix.scss";
+@import "./../constants/color.scss";
+@import "./../constants/size.scss";
+@import "./../mixin/color.scss";
+@import "./../mixin/size.scss";
+
+.is {
+  &-primary {}
+
+  &-success {}
+
+  &-warning {}
+
+  &-danger {}
+
+  &-info {}
+}
+
+// 激活
+.active {
+  &-hover {}
+
+  &-focus {}
+
+  &-visited {}
+
+  &-active {}
+}
+
+@import "./color.scss";

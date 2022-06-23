@@ -1,0 +1,14 @@
+// icon
+
+@import "./../constants/prefix.scss";
+@import "./../constants/color.scss";
+@import "./../constants/size.scss";
+@import "./../mixin/color.scss";
+@import "./../mixin/size.scss";
+
+.#{$g-pre}icon {
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  vertical-align: top;
+}

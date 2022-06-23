@@ -2,6 +2,12 @@
  * @name Grid
  * @desc 栅格布局
  */
+@import "./../constants/prefix.scss";
+@import "./../constants/color.scss";
+@import "./../constants/size.scss";
+@import "./../mixin/color.scss";
+@import "./../mixin/size.scss";
+
 .#{$g-pre}grid {
   @media (min-width: 768px) {
     width: 750px;

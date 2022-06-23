@@ -1,0 +1,15 @@
+/**
+ * @name Dark
+ * @desc 暗黑主题
+ */
+@import "./../constants/prefix.scss";
+@import "./../constants/color.scss";
+@import "./../constants/size.scss";
+@import "./../mixin/color.scss";
+@import "./../mixin/size.scss";
+
+@media (prefers-color-scheme: dark) {
+  html {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}

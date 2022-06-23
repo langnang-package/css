@@ -8,12 +8,18 @@ const gulp = require('gulp')
 
 gulp.task('clean', () => gulp.src('./dist').pipe(clean()))
 
-gulp.task('sass', () => gulp.src('./packages/index.scss')
+gulp.task('sass', () => gulp.src('./packages/**/*.scss')
   .pipe(sass())
   .pipe(autoprefixer({
     browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
     cascade: false
   }))
+  .pipe(rename({
+    // basename: 'ln'
+  }))
+  .pipe(gulp.dest('dist'))
+)
+gulp.task('rename', () => gulp.src('./dist/index.css')
   .pipe(rename({
     basename: 'ln'
   }))
@@ -32,4 +38,4 @@ gulp.task('watch', () => {
   gulp.watch('./packages/**', gulp.series(['sass']))
 })
 
-gulp.task('default', gulp.series(['clean', 'sass', 'min']))
+gulp.task('default', gulp.series(['clean', 'sass', 'rename', 'min']))

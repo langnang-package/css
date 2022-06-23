@@ -1,5 +1,59 @@
 @import "./normalize.scss";
 
-$g-pre: "ln-";
+// Constants
+@import "./constants/prefix.scss";
+@import "./constants/color.scss";
+@import "./constants/size.scss";
 
-@import './layout/grid.scss';
+// Mixin
+@import "./mixin/color.scss";
+@import "./mixin/size.scss";
+
+// Modify
+@import "./modify/color.scss";
+
+// Layout
+@import "./layout/grid.scss";
+@import "./layout/flex.scss";
+@import "./layout/masonry.scss";
+
+// Element
+@import "./elements/a.scss";
+@import "./elements/button.scss";
+@import "./elements/h.scss";
+@import "./elements/input.scss";
+@import "./elements/ol.scss";
+@import "./elements/ul.scss";
+
+// Components
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
